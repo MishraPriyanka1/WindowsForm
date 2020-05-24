@@ -1,0 +1,15 @@
+C:\Users\Priyanka Mishra\source\repos\AdressManagement\AdressManagement\bin\Debug\AdressManagement.exe.config
+C:\Users\Priyanka Mishra\source\repos\AdressManagement\AdressManagement\bin\Debug\AdressManagement.exe
+C:\Users\Priyanka Mishra\source\repos\AdressManagement\AdressManagement\bin\Debug\AdressManagement.pdb
+C:\Users\Priyanka Mishra\source\repos\AdressManagement\AdressManagement\bin\Debug\EntityFramework.dll
+C:\Users\Priyanka Mishra\source\repos\AdressManagement\AdressManagement\bin\Debug\EntityFramework.xml
+C:\Users\Priyanka Mishra\source\repos\AdressManagement\AdressManagement\obj\Debug\AdressManagement.csprojAssemblyReference.cache
+C:\Users\Priyanka Mishra\source\repos\AdressManagement\AdressManagement\obj\Debug\AdressManagement.Form1.resources
+C:\Users\Priyanka Mishra\source\repos\AdressManagement\AdressManagement\obj\Debug\AdressManagement.Properties.Resources.resources
+C:\Users\Priyanka Mishra\source\repos\AdressManagement\AdressManagement\obj\Debug\AdressManagement.csproj.GenerateResource.cache
+C:\Users\Priyanka Mishra\source\repos\AdressManagement\AdressManagement\obj\Debug\AdressManagement.csproj.CoreCompileInputs.cache
+C:\Users\Priyanka Mishra\source\repos\AdressManagement\AdressManagement\obj\Debug\AdressManagement.csproj.CopyComplete
+C:\Users\Priyanka Mishra\source\repos\AdressManagement\AdressManagement\obj\Debug\AdressManagement.exe
+C:\Users\Priyanka Mishra\source\repos\AdressManagement\AdressManagement\obj\Debug\AdressManagement.pdb
+C:\Users\Priyanka Mishra\source\repos\AdressManagement\AdressManagement\obj\Debug\AdressManagement.Login.resources
+C:\Users\Priyanka Mishra\source\repos\AdressManagement\AdressManagement\obj\Debug\AdressManagement.AdminDashboard.resources

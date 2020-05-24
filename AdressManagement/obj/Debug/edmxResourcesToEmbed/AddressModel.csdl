@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="addressDBModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityType Name="Registration">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Contact" Type="String" MaxLength="22" FixedLength="false" Unicode="false" />
+    <Property Name="FirstName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="LastName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="UserLogin" Relationship="Self.FK__Registrat__UserI__173876EA" FromRole="Registration" ToRole="UserLogin" />
+  </EntityType>
+  <EntityType Name="Role">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RoleName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="UserLogins" Relationship="Self.FK__UserLogin__RoleI__1367E606" FromRole="Roles" ToRole="UserLogin" />
+  </EntityType>
+  <EntityType Name="UserLogin">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="RoleId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Registrations" Relationship="Self.FK__Registrat__UserI__173876EA" FromRole="UserLogin" ToRole="Registration" />
+    <NavigationProperty Name="Role" Relationship="Self.FK__UserLogin__RoleI__1367E606" FromRole="UserLogin" ToRole="Roles" />
+  </EntityType>
+  <Association Name="FK__Registrat__UserI__173876EA">
+    <End Role="UserLogin" Type="Self.UserLogin" Multiplicity="1" />
+    <End Role="Registration" Type="Self.Registration" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserLogin">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Registration">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__UserLogin__RoleI__1367E606">
+    <End Role="Roles" Type="Self.Role" Multiplicity="1" />
+    <End Role="UserLogin" Type="Self.UserLogin" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Roles">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="UserLogin">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="addressDBEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Registrations" EntityType="Self.Registration" />
+    <EntitySet Name="Roles" EntityType="Self.Role" />
+    <EntitySet Name="UserLogins" EntityType="Self.UserLogin" />
+    <AssociationSet Name="FK__Registrat__UserI__173876EA" Association="Self.FK__Registrat__UserI__173876EA">
+      <End Role="UserLogin" EntitySet="UserLogins" />
+      <End Role="Registration" EntitySet="Registrations" />
+    </AssociationSet>
+    <AssociationSet Name="FK__UserLogin__RoleI__1367E606" Association="Self.FK__UserLogin__RoleI__1367E606">
+      <End Role="Roles" EntitySet="Roles" />
+      <End Role="UserLogin" EntitySet="UserLogins" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

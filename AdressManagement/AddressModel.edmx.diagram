@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="1d4c6f8e622245eb8ddd3879d8d9e174" Name="Diagram1">
+        <EntityTypeShape EntityType="addressDBModel.Registration" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="addressDBModel.Role" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="addressDBModel.UserLogin" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <AssociationConnector Association="addressDBModel.FK__Registrat__UserI__173876EA" ManuallyRouted="false" />
+        <AssociationConnector Association="addressDBModel.FK__UserLogin__RoleI__1367E606" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
